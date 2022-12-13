@@ -17,7 +17,7 @@ function showAlert() {
       }
 }
 
-showAlert
+showAlert()
 
 
 
@@ -31,7 +31,7 @@ function playGame() {
     
 }
    
-playGame
+playGame()
 
 
 
@@ -42,7 +42,7 @@ function generateLetter() {
   return alphabet[Math.floor(Math.random() * alphabet.length)]
 }
 
-alert(generateLetter)
+alert(generateLetter())
 
 
 
@@ -71,5 +71,5 @@ function showResult() {
 
 }
 
-showResult
+showResult()
 
