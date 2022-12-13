@@ -68,8 +68,6 @@ function showResult() {
   } else {
     alert("Vyhral si")
   }
-
 }
-
 showResult()
 
