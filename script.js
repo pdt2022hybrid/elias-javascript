@@ -1,8 +1,8 @@
 
 
-function myFunction() {
-    alert("Hello World!");
-}
+// function myFunction() {
+//     alert("Hello World!");
+// }
 
 
 
@@ -10,14 +10,12 @@ function showAlert() {
     let person = prompt("Si pripravenny hrat ? (ano/nie)");
     if (person == null || person == "") {
         alert("Nic ste nenapisali.")
-      } else if (person == "ano") {
-        alert("Hra zacina...Vela stastia! Stlac START.")
+      } else if (person == "ano" || person == "ano ") {
+        alert("Hra zacne po stlaceni tlacitka START. Vela stastia!")
       } else {
         alert("Tak si este precitajte navod na hranie.")
       }
 }
-
-showAlert()
 
 
 
@@ -30,8 +28,8 @@ function playGame() {
     } 
     
 }
-   
-playGame()
+
+
 
 
 
@@ -40,9 +38,12 @@ function generateLetter() {
   const alphabet = 'KPN';
 
   return alphabet[Math.floor(Math.random() * alphabet.length)]
+
+
 }
 
-alert(generateLetter())
+// alert(generateLetter())
+
 
 
 
@@ -69,5 +70,5 @@ function showResult() {
     alert("Vyhral si")
   }
 }
-showResult()
+// showResult()
 
