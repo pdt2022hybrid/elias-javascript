@@ -17,7 +17,11 @@ function showAlert() {
       }
 }
 
+function generateLetter() {
+  const alphabet = 'KPN';
 
+  return alphabet[Math.floor(Math.random() * alphabet.length)]
+}
 
 
 
@@ -26,49 +30,46 @@ function playGame() {
     if(person == null || person == "") {
         alert("Musis nieco napisat!")
     } 
+    const pcChoice = generateLetter();
+    console.log(pcChoice);
+    showResult(person, pcChoice);
+}
+
+
+
+
+
+
+
+
+    function showResult(person, bot) {
+      alert(bot);
     
-}
+      if(person == 'K' && bot == 'P') {
+        alert("Prehral si")
+      } else if(person == 'P' && bot == 'K') {
+        alert("Vyhral si")
+      } else if(person == 'P' && bot == 'N') {
+        alert("Prehral si")
+      } else if(person == 'N' && bot == 'P') {
+        alert("Vyhral si")
+      } else if(person == 'N' && bot == 'K') {
+        alert("Prehral si")
+      } else if(person == 'N' && bot == 'N') {
+        alert("Remiza")
+      } else if(person == 'K' && bot == 'K') {
+        alert("Remiza")
+      } else if(person == 'P' && bot == 'P') {
+        alert("Remiza")
+      } else {
+        alert("Vyhral si")
+      }
+    }
 
 
 
 
 
-
-function generateLetter() {
-  const alphabet = 'KPN';
-
-  return alphabet[Math.floor(Math.random() * alphabet.length)]
-
-
-}
-
-// alert(generateLetter())
-
-
-
-
-
-function showResult() {
-
-  if(person == K && generateLetter() == P) {
-    alert("Prehral si")
-  } else if(person == P && generateLetter() == K) {
-    alert("Vyhral si")
-  } else if(person == P && generateLetter() == N) {
-    alert("Prehral si")
-  } else if(person == N && generateLetter() == P) {
-    alert("Vyhral si")
-  } else if(person == N && generateLetter() == K) {
-    alert("Prehral si")
-  } else if(person == N && generateLetter() == N) {
-    alert("Remiza")
-  } else if(person == K && generateLetter() == K) {
-    alert("Remiza")
-  } else if(person == P && generateLetter() == P) {
-    alert("Remiza")
-  } else {
-    alert("Vyhral si")
-  }
-}
-// showResult()
+showResult()
+alert(generateLetter())
 
