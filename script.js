@@ -39,22 +39,37 @@ function playGame() {
 
 
 
-
+  let playerScore = 0;
+  let computerScore = 0;
+  let moves = 0;
 
 
     function showResult(person, bot) {
       alert(bot);
+      const playerScoreBoard = document.querySelector('.p-count');
+      const computerScoreBoard = document.querySelector('.c-count');
+
     
       if(person == 'K' && bot == 'P') {
         alert("Prehral si")
+        computerScore++;
+        computerScoreBoard.textContent = computerScore;
       } else if(person == 'P' && bot == 'K') {
         alert("Vyhral si")
+        playerScore++;
+        playerScoreBoard.textContent = playerScore;
       } else if(person == 'P' && bot == 'N') {
         alert("Prehral si")
+        computerScore++;
+        computerScoreBoard.textContent = computerScore;
       } else if(person == 'N' && bot == 'P') {
         alert("Vyhral si")
+        playerScore++;
+        playerScoreBoard.textContent = playerScore;
       } else if(person == 'N' && bot == 'K') {
         alert("Prehral si")
+        computerScore++;
+        computerScoreBoard.textContent = computerScore;
       } else if(person == 'N' && bot == 'N') {
         alert("Remiza")
       } else if(person == 'K' && bot == 'K') {
@@ -63,10 +78,20 @@ function playGame() {
         alert("Remiza")
       } else {
         alert("Vyhral si")
+        playerScore++;
+        playerScoreBoard.textContent = playerScore;
       }
     }
 
 
+
+
+    const movesleft = document.querySelector('movesleft');
+    moves++;
+    movesLeft.innerHTML = 'Moves left: ${10-moves}';
+
+      const choiceNumber = Math.floor(Math.random()*3);
+      const computerChoice = computerOptions[choiceNumber];
 
 
 
