@@ -73,3 +73,13 @@ function playGame() {
 showResult()
 alert(generateLetter())
 
+
+
+
+function showScore() {
+  let bot = document.querySelector("#pcChoice");
+  let score = document.querySelector("#score");
+
+  score.innerHTML = score;
+
+}
