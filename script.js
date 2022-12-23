@@ -32,6 +32,7 @@ function playGame() {
     } 
     const pcChoice = generateLetter();
     console.log(pcChoice);
+    console.log(person)
     showResult(person, pcChoice);
 }
 
@@ -53,23 +54,23 @@ function playGame() {
       if(person == 'K' && bot == 'P') {
         alert("Prehral si")
         computerScore++;
-        computerScoreBoard.textContent = computerScore;
+        computerScoreBoard.score = computerScore;
       } else if(person == 'P' && bot == 'K') {
         alert("Vyhral si")
         playerScore++;
-        playerScoreBoard.textContent = playerScore;
+        playerScoreBoard.score = playerScore;
       } else if(person == 'P' && bot == 'N') {
         alert("Prehral si")
         computerScore++;
-        computerScoreBoard.textContent = computerScore;
+        computerScoreBoard.score = computerScore;
       } else if(person == 'N' && bot == 'P') {
         alert("Vyhral si")
         playerScore++;
-        playerScoreBoard.textContent = playerScore;
+        playerScoreBoard.score = playerScore;
       } else if(person == 'N' && bot == 'K') {
         alert("Prehral si")
         computerScore++;
-        computerScoreBoard.textContent = computerScore;
+        computerScoreBoard.score = computerScore;
       } else if(person == 'N' && bot == 'N') {
         alert("Remiza")
       } else if(person == 'K' && bot == 'K') {
@@ -79,19 +80,22 @@ function playGame() {
       } else {
         alert("Vyhral si")
         playerScore++;
-        playerScoreBoard.textContent = playerScore;
+        playerScoreBoard.score = playerScore;
       }
     }
 
 
 
 
-    const movesleft = document.querySelector('movesleft');
+    const movesLeft = document.querySelector(movesLeft);
+    console.log(movesLeft)
     moves++;
-    movesLeft.innerHTML = 'Moves left: ${10-moves}';
+    movesLeft.innerHTML = `Moves left: ${10-moves}`;
 
       const choiceNumber = Math.floor(Math.random()*3);
-      const computerChoice = computerOptions[choiceNumber];
+     
+
+      
 
 
 
@@ -102,9 +106,11 @@ alert(generateLetter())
 
 
 function showScore() {
-  let bot = document.querySelector("#pcChoice");
+  bot = document.querySelector("#pcChoice");
   let score = document.querySelector("#score");
 
-  score.innerHTML = score;
+  score.innerHTML = bot.value + person.value;
 
 }
+
+
