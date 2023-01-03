@@ -51,6 +51,7 @@ function playGame() {
       const playerScoreBoard = document.querySelector('.p-count');
       const computerScoreBoard = document.querySelector('.c-count');
       
+      const resultOptions = ['Vyhral si', 'Prehral si', 'Remiza'];
 
     
       if(person == 'K' && bot == 'P') {
@@ -86,11 +87,11 @@ function playGame() {
         playerScore++;
         playerScoreBoard.innerHTML = playerScore;
       }
-     
+    //  console.log()   
     }
 
 
-
+    
 
     const movesLeft = document.querySelector('.movesLeft');
     console.log(movesLeft)
@@ -100,17 +101,13 @@ function playGame() {
     const choiceNumber = Math.floor(Math.random()*3);
     const computerChoice = alphabet[choiceNumber];
 
-    // Function to check who wins
+    
     winner(this.innerText,computerChoice)
 
     if(moves == 10) {
       gameOver(alphabet, movesLeft);
     }
-
-     
-
-      
-
+  
 
 
 showResult()
@@ -119,15 +116,9 @@ alert(generateLetter())
 
 
 
-function showScore() {
-  bot = document.querySelector("#pcChoice");
-  let score = document.querySelector("#score");
-
-  score.innerHTML = bot.value + person.value;
-
-}
 
 
+option.addEventListener('click');
 const gameOver = (alphabet, movesLeft) => {
   const over = document.querySelector('.vysledok-hry');
   const result = document.querySelector('.result');
@@ -137,17 +128,18 @@ const gameOver = (alphabet, movesLeft) => {
 
   if(playerScore > computerScore) {
     result.innerText = "You won the game!!";
-  } else if(playerScore < computerScore){
+  } else if(playerScore < computerScore) {
     result.innerText = 'You Lost The Game';
   } else {
     result.innerText = 'Draw';
   }
 
+  reloadGame.innerText = 'reload';
+  reloadGame.addEventListener('click',() => {
+    window.location.reload();
+  })
+
   
-  reloadGame.innerText = 'Restart';
-  
-  
-  
-  }
+}
 
 
