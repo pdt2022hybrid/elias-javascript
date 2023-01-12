@@ -14,7 +14,7 @@
 .my-button {
     text-align: center;
     margin: 50px;
-
+    
 }
 
 .my-button1 {
@@ -25,4 +25,12 @@
 .btn-newgame {
     text-align: center;
     margin: 50px;
+}
+
+.my-button button{
+    background-color: aqua;
+    padding: 20px;
+    width: 100px;
+    border: 10px;
+
 }

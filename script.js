@@ -31,7 +31,7 @@ function playGame() {
         alert("Musis nieco napisat!")
     } 
     const pcChoice = generateLetter();
-    console.log(pcChoice);
+    console.log(pcChoice)
     console.log(person)
     showResult(person, pcChoice);
 }
@@ -53,7 +53,11 @@ function playGame() {
       
       const resultOptions = ['Vyhral si', 'Prehral si', 'Remiza'];
 
-    
+      // if(person == 'KPN' || person == 'KNP' || person == 'NKP' || person == 'NPK' || person == 'PKN' || person == 'PNK') {
+      //   alert("Nemozes dat viac ako jedno pismeno")
+      // }
+      // Matus zacal tak mozno dokoncim 
+      
       if(person == 'K' && bot == 'P') {
         alert("Prehral si")
         computerScore++;
@@ -139,7 +143,17 @@ const gameOver = (alphabet, movesLeft) => {
     window.location.reload();
   })
 
+
   
 }
 
 
+const myHistory = () => {
+    const computerHistory = document.querySelector('computerhistory');
+    const playerHistory = document.querySelector('playerhistory');
+  
+    computerHistory.innerHTML = bot;
+    playerHistory.innerHTML = person;
+
+  
+}
