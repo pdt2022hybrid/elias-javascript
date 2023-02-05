@@ -91,7 +91,8 @@ function playGame() {
         playerScore++;
         playerScoreBoard.innerHTML = playerScore;
       }
-    //  console.log()   
+      console.log("Zadal si", person, " a ", "Pc zadal", bot)  
+      console.log("PC = ", computerScore, "TY = ", playerScore) 
     }
 
 

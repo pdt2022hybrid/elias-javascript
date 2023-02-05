@@ -1,4 +1,10 @@
 
+
+body {
+    background: aliceblue;
+}
+
+
 .title {
     text-align: center;
 }
@@ -11,10 +17,27 @@
     text-align: center; 
 }
 
+
+
+.btn-newgame {
+    text-align: center;
+    margin: 50px;
+}
+
 .my-button {
     text-align: center;
     margin: 50px;
     
+}
+
+.my-button button{
+    background-color: aqua;
+    padding: 20px;
+    width: 100px;
+    border-radius: 10px;
+    border: 0px;
+
+
 }
 
 .my-button1 {
@@ -22,15 +45,14 @@
     margin: 50px;
 }
 
-.btn-newgame {
-    text-align: center;
-    margin: 50px;
-}
-
-.my-button button{
-    background-color: aqua;
+.my-button1 button {
+    background-color: burlywood;
     padding: 20px;
     width: 100px;
-    border: 10px;
+    border-radius: 10px;
+    border: 0px;
 
+    
+
+    
 }
